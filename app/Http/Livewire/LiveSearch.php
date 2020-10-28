@@ -9,13 +9,10 @@ class LiveSearch extends Component
 {
 	public $name;
 
-	public function mount()
-	{
-		dd(PhoneBook::searchByName('Deo'));
-	}
-
     public function render()
     {
-        return view('livewire.live-search');
+        return view('livewire.live-search',[
+        	'contacts' => PhoneBook::searchByName('Deo')
+        ]);
     }
 }
