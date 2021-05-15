@@ -15,7 +15,7 @@ class LiveSearch extends Component
 	{
 		if(!empty($this->name)){
 			sleep(1);
-
+			
 			$results = $this->contacts = PhoneBook::searchByName($this->name);
 
 			if(empty($results)){
